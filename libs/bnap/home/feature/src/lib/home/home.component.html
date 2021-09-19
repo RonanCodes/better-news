@@ -2,42 +2,17 @@
 <h2>Home Page</h2>
 
 <img width="450" src="/assets/images/news.png" alt="BNAP - Better News Apps" />
+<!-- <pre>{{ latestStories$ | json }}</pre> -->
+<!-- <pre>1{{ latestStories$ | async }}</pre> -->
+<!-- <pre>2{{ latestStories$ | async | json }}</pre> -->
 
-<div *ngFor="let story of latestStories$ | async" class="story">
-  <hr />
-  <h1>{{ story.title }}</h1>
-  <strong>Summary:</strong> {{ story.summary }} <br />
+<!-- <h1 *ngIf="(latestStories$ | async | json) === null">LOADING</h1> -->
+<h1 *ngIf="(latestStories$ | async)?.length! <= 0">LOADING</h1>
 
-  <section *ngIf="story.author">
-    <h2>Author</h2>
-    <strong>{{ story.author! }}</strong> <br />
-    <img src="{{ getWriterImage(story.writerimage!) }}" />
-  </section>
-
-  <br />
-  <section>
-    <img src="{{ getLargeImage(story.indeximage!) }}" />
-    <br />
-    <small>{{ getImageCaption(story.indeximage!) }}</small>
-  </section>
-
-  <br />
-  <section class="info">
-    <!-- <button>Show/Hide Info</button> <br /> -->
-
-    <strong>Section:</strong> {{ story.section }} <br />
-    <strong>Topic:</strong> {{ story.customfields?.topic }} <br />
-    <strong>Writers:</strong> {{ story.customfields?.writers }} <br />
-    <strong>Article Section:</strong> {{ story.articlesection }}
-    <br />
-    <strong>Big Story:</strong> {{ story.bigstory }} <br />
-    <strong>Comments Status:</strong> {{ story.commentsstatus }}
-    <br />
-  </section>
-
-  <h2>Content</h2>
-  <!-- {{ story.content }} -->
-  <div [innerHTML]="story.content"></div>
-</div>
+<bnap-article
+  *ngFor="let story of latestStories$ | async"
+  [story]="story"
+  class="story"
+></bnap-article>
 
 <!-- <pre>Message: {{ latestStories$ | async | json }}</pre> -->

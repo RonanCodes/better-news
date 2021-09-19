@@ -1,16 +1,47 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ChangeDetectionStrategy,
+  Input,
+} from '@angular/core';
+import {
+  Image,
+  IrishTimesIphoneResponse,
+  SizeElement,
+  SizeEnum,
+  Story,
+} from '@better-news/api-interfaces';
 
 @Component({
   selector: 'bnap-article',
   templateUrl: './article.component.html',
   styleUrls: ['./article.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ArticleComponent implements OnInit {
+export class ArticleComponent {
+  @Input() story?: Story;
 
-  constructor() { }
+  getLargeImage(images: Image[]): string {
+    // sizeElements: SizeElement[]
+    const sizeElements = images[0].sizes!;
 
-  ngOnInit(): void {
+    return this.getLargeImageOrFirst(sizeElements!);
   }
 
+  private getLargeImageOrFirst(sizeElements: SizeElement[]) {
+    const largeImageSource = sizeElements.find(
+      (sizeElement) => sizeElement.size === SizeEnum.Large
+    )?.source;
+    return largeImageSource ? largeImageSource : sizeElements[0]?.source;
+  }
+
+  getImageCaption(images: Image[]): string {
+    const image = images[0];
+    return image.caption!;
+  }
+
+  getWriterImage(image: Image): string {
+    const sizeElements = image.sizes;
+    return sizeElements ? this.getLargeImageOrFirst(sizeElements!) : '';
+  }
 }

@@ -1,1 +1,36 @@
-<p>article works!</p>
+<ng-container *ngIf="story">
+  <hr />
+  <h1>{{ story.title }}</h1>
+  <strong>Summary:</strong> {{ story.summary }} <br />
+
+  <section *ngIf="story.author">
+    <h2>Author</h2>
+    <strong>{{ story.author! }}</strong> <br />
+    <img src="{{ getWriterImage(story.writerimage!) }}" />
+  </section>
+
+  <br />
+  <section>
+    <img src="{{ getLargeImage(story.indeximage!) }}" />
+    <br />
+    <small>{{ getImageCaption(story.indeximage!) }}</small>
+  </section>
+
+  <br />
+  <section class="info">
+    <!-- <button>Show/Hide Info</button> <br /> -->
+
+    <strong>Section:</strong> {{ story.section }} <br />
+    <strong>Topic:</strong> {{ story.customfields?.topic }} <br />
+    <strong>Writers:</strong> {{ story.customfields?.writers }} <br />
+    <strong>Article Section:</strong> {{ story.articlesection }}
+    <br />
+    <strong>Big Story:</strong> {{ story.bigstory }} <br />
+    <strong>Comments Status:</strong> {{ story.commentsstatus }}
+    <br />
+  </section>
+
+  <h2>Content</h2>
+  <!-- {{ story.content }} -->
+  <div [innerHTML]="story.content"></div>
+</ng-container>

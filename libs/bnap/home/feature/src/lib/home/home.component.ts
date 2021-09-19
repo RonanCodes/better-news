@@ -8,6 +8,7 @@ import {
   Story,
 } from '@better-news/api-interfaces';
 import { Observable } from 'rxjs';
+import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'bnap-home',
@@ -19,34 +20,12 @@ export class HomeComponent {
   public latestStories$: Observable<Story[]>;
 
   constructor(private http: HttpClient) {
-    this.latestStories$ = this.http.get<Story[]>('/api/latest');
+    this.latestStories$ = this.http
+      .get<Story[]>('/api/latest')
+      .pipe(delay(4000));
   }
 
   // getImages(images: Image[]): Image {
   //   return images[0]!;
   // }
-
-  getLargeImage(images: Image[]): string {
-    // sizeElements: SizeElement[]
-    const sizeElements = images[0].sizes!;
-
-    return this.getLargeImageOrFirst(sizeElements!);
-  }
-
-  private getLargeImageOrFirst(sizeElements: SizeElement[]) {
-    const largeImageSource = sizeElements.find(
-      (sizeElement) => sizeElement.size === SizeEnum.Large
-    )?.source;
-    return largeImageSource ? largeImageSource : sizeElements[0]?.source;
-  }
-
-  getImageCaption(images: Image[]): string {
-    const image = images[0];
-    return image.caption!;
-  }
-
-  getWriterImage(image: Image): string {
-    const sizeElements = image.sizes;
-    return sizeElements ? this.getLargeImageOrFirst(sizeElements!) : '';
-  }
 }
