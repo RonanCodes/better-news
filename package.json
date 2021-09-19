@@ -4,15 +4,16 @@
   "license": "MIT",
   "scripts": {
     "ng": "nx",
-    "postinstall": "if [ !$NEST_HEROKU ]; then echo 'NEST_HEROKU=true' && node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main; fi",
-    "start": "if [ $NEST_HEROKU ]; then echo 'NEST_HEROKU=true' && npm run start:nest:prod; else echo 'NEST_HEROKU=false' && nx serve; fi",
-    "build": "if [ $NEST_HEROKU ]; then echo 'NEST_HEROKU=true' && npm run build:nest; else echo 'NEST_HEROKU=false' && nx build; fi",
-    "heroku-postbuild": "npm run build:nest",
-    "start:prod": "if [ $NEST_HEROKU ]; then echo 'NEST_HEROKU=true' && npm run start:nest:prod; fi",
+    "postinstall": "if [ !$NEST_HEROKU ]; then node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main; fi",
+    "start": "if [ $NEST_HEROKU ]; then npm run start:nest:prod; elif [ $NG_HEROKU ]; then npm run start:ng:prod; else nx serve; fi",
+    "build": "if [ $NEST_HEROKU ]; then npm run build:nest; elif [ $NG_HEROKU ]; then npm run build:ng; else nx build; fi",
+    "start:prod": "if [ $NEST_HEROKU ]; then npm run start:nest:prod; elif [ $NG_HEROKU ]; then npm run start:ng:prod; fi",
     "test": "nx test",
+    "build:ng": "nx run api:build",
     "build:nest": "nx run api:build",
     "start:nest": "nx run api:serve",
-    "start:nest:prod": "node dist/apps/api/main"
+    "start:nest:prod": "node dist/apps/api/main",
+    "start:ng:prod": "node dist/apps/better-news-app/main"
   },
   "private": true,
   "dependencies": {
