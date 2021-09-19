@@ -1,12 +1,15 @@
 <ng-container *ngIf="story">
   <hr />
   <h1>{{ story.title }}</h1>
-  <strong>Summary:</strong> {{ story.summary }} <br />
+  <!-- <strong>Summary:</strong>  -->
+  {{ story.summary }} <br />
+  <br />
+  <br />
 
   <section *ngIf="story.author">
-    <h2>Author</h2>
-    <strong>{{ story.author! }}</strong> <br />
-    <img src="{{ getWriterImage(story.writerimage!) }}" />
+    <!-- <h2>Author</h2> -->
+    <img src="{{ getWriterImage(story.writerimage!) }}" /><br />
+    <strong>{{ story.author! }}</strong>
   </section>
 
   <br />
@@ -30,7 +33,7 @@
     <br />
   </section>
 
-  <h2>Content</h2>
+  <!-- <h2>Content</h2> -->
   <!-- {{ story.content }} -->
   <div [innerHTML]="story.content"></div>
 </ng-container>
