@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "ng": "if [ $NEST_HEROKU ]; then echo 'NEST_HEROKU=true' && ng; else echo 'NEST_HEROKU=false' && nx",
-    "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
+    "ng": "nx",
+    "postinstall": "if [ !$NEST_HEROKU ]; then echo 'NEST_HEROKU=true' && node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main; fi",
     "start": "if [ $NEST_HEROKU ]; then echo 'NEST_HEROKU=true' && npm run start:nest; else echo 'NEST_HEROKU=false' && nx serve; fi",
     "build": "if [ $NEST_HEROKU ]; then echo 'NEST_HEROKU=true' && npm run build:nest; else echo 'NEST_HEROKU=false' && nx build; fi",
     "heroku-postbuild": "npm run build:nest",
@@ -65,6 +65,7 @@
     "eslint-plugin-cypress": "^2.10.3",
     "jest": "27.0.3",
     "jest-preset-angular": "9.0.7",
+    "nx": "^12.9.0",
     "prettier": "^2.3.1",
     "ts-jest": "27.0.3",
     "typescript": "~4.3.5"
