@@ -9,11 +9,11 @@
     "build": "if [ $NEST_HEROKU ]; then npm run build:nest; elif [ $NG_HEROKU ]; then npm run build:ng; else nx build; fi",
     "start:prod": "if [ $NEST_HEROKU ]; then npm run start:nest:prod; elif [ $NG_HEROKU ]; then npm run start:ng:prod; fi",
     "test": "nx test",
-    "build:ng": "nx run api:build",
+    "build:ng": "nx run better-news-app:build -- --output-hashing none",
     "build:nest": "nx run api:build",
     "start:nest": "nx run api:serve",
-    "start:nest:prod": "node dist/apps/api/main",
-    "start:ng:prod": "node dist/apps/better-news-app/main"
+    "start:nest:prod": "node dist/apps/api/main.js",
+    "start:ng:prod": "node dist/apps/better-news-app/main.js"
   },
   "private": true,
   "dependencies": {
