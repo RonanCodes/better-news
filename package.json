@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "ng": "nx",
+    "ng": "if [ $NEST_HEROKU ]; then echo 'NEST_HEROKU=true' && ng; else echo 'NEST_HEROKU=false' && nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "if [ $NEST_HEROKU ]; then echo 'NEST_HEROKU=true' && npm run start:nest; else echo 'NEST_HEROKU=false' && nx serve; fi",
     "build": "if [ $NEST_HEROKU ]; then echo 'NEST_HEROKU=true' && npm run build:nest; else echo 'NEST_HEROKU=false' && nx build; fi",
