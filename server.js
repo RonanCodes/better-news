@@ -1,3 +1,4 @@
+// TODO: Move this to a simple bucket
 const express = require('express');
 const path = require('path');
 
@@ -8,4 +9,6 @@ app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname + '/dist/apps/better-news-app/index.html'));
 });
 
-app.listen(process.env.PORT || 4200);
+const port  = process.env.PORT || 4200;
+app.listen(port);
+console.log(`Listening on port ${port}...`);
