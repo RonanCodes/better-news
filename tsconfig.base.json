@@ -37,6 +37,9 @@
       ],
       "@better-news/bnap/shared/ui/article/related": [
         "libs/bnap/shared/ui/article/related/src/index.ts"
+      ],
+      "@better-news/bnap/shared/ui/articles": [
+        "libs/bnap/shared/ui/articles/src/index.ts"
       ]
     }
   },

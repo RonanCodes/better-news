@@ -64,6 +64,9 @@
     },
     "bnap-shared-ui-article-related": {
       "tags": ["scope:bnap", "type:ui"]
+    },
+    "bnap-shared-ui-articles": {
+      "tags": ["scope:bnap", "type:ui"]
     }
   }
 }
