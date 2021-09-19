@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import {
   Image,
   IrishTimesIphoneResponse,
+  IrishTimesRestEndpoint,
   SizeElement,
   SizeEnum,
   Story,
@@ -18,6 +19,10 @@ import { delay } from 'rxjs/operators';
 })
 export class HomeComponent {
   public latestStories$: Observable<Story[]>;
+
+  get categories(): typeof IrishTimesRestEndpoint {
+    return IrishTimesRestEndpoint;
+  }
 
   constructor(private http: HttpClient) {
     this.latestStories$ = this.http

@@ -60,7 +60,7 @@ export class IrishTimesRestService {
     const sanitizedString = htmlString.replace(pattern3, '');
 
     // htmlString.replace('!?(<script>).+?(<\\/script>)', '');
-    console.log({ sanitizedString });
+    // console.log({ sanitizedString });
 
     return sanitizedString;
   }

@@ -1,19 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { CategoryComponent } from './category/category.component';
 import { BnapSharedUiArticleModule } from '@better-news/bnap/shared/ui/article';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild([
-      { path: '', pathMatch: 'full', component: HomeComponent },
+      { path: ':category', pathMatch: 'full', component: CategoryComponent },
+      {
+        path: '',
+        redirectTo: 'latest',
+        pathMatch: 'full',
+      },
     ]),
     BnapSharedUiArticleModule,
     RouterModule,
   ],
-  declarations: [HomeComponent],
-  exports: [HomeComponent],
+  declarations: [CategoryComponent],
+  exports: [CategoryComponent],
 })
-export class BnapHomeFeatureModule {}
+export class BnapCategoryFeatureModule {}

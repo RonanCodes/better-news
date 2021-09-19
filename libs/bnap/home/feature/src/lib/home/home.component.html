@@ -2,17 +2,28 @@
 <h2>Home Page</h2>
 
 <img width="450" src="/assets/images/news.png" alt="BNAP - Better News Apps" />
+<!-- <h1 *ngIf="(latestStories$ | async)?.length! <= 0">LOADING</h1> -->
+
+<!-- <bnap-article
+  *ngFor="let story of latestStories$ | async"
+  [story]="story"
+  class="story"
+></bnap-article> -->
+
+<ul>
+  <li *ngFor="let category of categories | keyvalue">
+    <a routerLink="/category/{{ category.value }}" routerLinkActive>{{
+      category.key
+    }}</a>
+    <!-- // Useful for ids #abroad -->
+    <!-- fragment="{{ category.value }}" -->
+  </li>
+</ul>
+
 <!-- <pre>{{ latestStories$ | json }}</pre> -->
 <!-- <pre>1{{ latestStories$ | async }}</pre> -->
 <!-- <pre>2{{ latestStories$ | async | json }}</pre> -->
 
 <!-- <h1 *ngIf="(latestStories$ | async | json) === null">LOADING</h1> -->
-<h1 *ngIf="(latestStories$ | async)?.length! <= 0">LOADING</h1>
-
-<bnap-article
-  *ngFor="let story of latestStories$ | async"
-  [story]="story"
-  class="story"
-></bnap-article>
 
 <!-- <pre>Message: {{ latestStories$ | async | json }}</pre> -->

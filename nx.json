@@ -41,6 +41,9 @@
       "tags": [],
       "implicitDependencies": ["better-news-app"]
     },
+    "bnap-category-feature": {
+      "tags": ["scope:bnap", "type:feature"]
+    },
     "bnap-home-feature": {
       "tags": ["scope:bnap", "type:feature"]
     },

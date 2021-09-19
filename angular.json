@@ -194,6 +194,31 @@
         }
       }
     },
+    "bnap-category-feature": {
+      "projectType": "library",
+      "root": "libs/bnap/category/feature",
+      "sourceRoot": "libs/bnap/category/feature/src",
+      "prefix": "bnap",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/bnap/category/feature"],
+          "options": {
+            "jestConfig": "libs/bnap/category/feature/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bnap/category/feature/src/**/*.ts",
+              "libs/bnap/category/feature/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "bnap-home-feature": {
       "projectType": "library",
       "root": "libs/bnap/home/feature",

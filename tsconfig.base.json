@@ -28,6 +28,9 @@
       "@better-news/bnap-shared-ui-article-preview-simple": [
         "libs/bnap/shared/ui/article/preview/simple/src/index.ts"
       ],
+      "@better-news/bnap/category/feature": [
+        "libs/bnap/category/feature/src/index.ts"
+      ],
       "@better-news/bnap/home/feature": ["libs/bnap/home/feature/src/index.ts"],
       "@better-news/bnap/shared/ui/article": [
         "libs/bnap/shared/ui/article/src/index.ts"

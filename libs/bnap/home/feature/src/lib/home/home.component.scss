@@ -1,15 +1,23 @@
+ul li {
+  // text-decoration: none;
+  // display: none;
+  list-style-type: none;
+  // font-size: 14px;
+  // padding: 5px;
+}
+
 // /*
 //    * Remove template code below
 //    */
-:host {
-  display: block;
-  font-family: sans-serif;
-  min-width: 300px;
-  // max-width: 600px;
-  max-width: 80%;
-  margin: 50px auto;
-  text-align: center;
-}
+// :host {
+//   display: block;
+//   font-family: sans-serif;
+//   min-width: 300px;
+//   // max-width: 600px;
+//   max-width: 80%;
+//   margin: 50px auto;
+//   text-align: center;
+// }
 
 // .gutter-left {
 //   margin-left: 9px;

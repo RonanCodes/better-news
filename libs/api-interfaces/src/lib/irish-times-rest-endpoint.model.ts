@@ -1,0 +1,20 @@
+// TODO: Remove duplication from API
+export enum IrishTimesRestEndpoint {
+  TopStories = 'top-stories',
+  SubscriberOnly = 'subscriber-only',
+  World = 'world',
+  Politics = 'politics',
+  Ireland = 'ireland',
+  Business = 'business',
+  MostRead = 'most-read',
+  Coronavirus = 'coronavirus',
+  Galleries = 'galleries',
+  Latest = 'latest',
+  Sport = 'sport',
+  Culture = 'culture',
+  Opinion = 'opinion',
+  Brexit = 'brexit',
+  Abroad = 'abroad',
+  Video = 'video',
+  LifeStyle = 'life-style',
+}

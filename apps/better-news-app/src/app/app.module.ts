@@ -5,12 +5,20 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Route, RouterModule } from '@angular/router';
 
+//TODO: For now home will house all the routes
 const routes: Route[] = [
   {
     path: 'home',
     loadChildren: () =>
       import('@better-news/bnap/home/feature').then(
         (m) => m.BnapHomeFeatureModule
+      ),
+  },
+  {
+    path: 'category',
+    loadChildren: () =>
+      import('@better-news/bnap/category/feature').then(
+        (m) => m.BnapCategoryFeatureModule
       ),
   },
   {
@@ -22,7 +30,11 @@ const routes: Route[] = [
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, HttpClientModule, RouterModule.forRoot(routes)],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    RouterModule.forRoot(routes, { enableTracing: false }),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

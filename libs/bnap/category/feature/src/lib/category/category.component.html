@@ -1,0 +1,10 @@
+<h1>📰 BNAP, the Better News App</h1>
+<h2>{{ categoryName }}</h2>
+
+<h1 *ngIf="(stories$ | async)?.length! <= 0">LOADING</h1>
+
+<bnap-article
+  *ngFor="let story of stories$ | async"
+  [story]="story"
+  class="story"
+></bnap-article>
