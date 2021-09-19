@@ -9,11 +9,15 @@
     "build": "if [ $NEST_HEROKU ]; then npm run build:nest; elif [ $NG_HEROKU ]; then npm run build:ng; else nx build; fi",
     "start:prod": "if [ $NEST_HEROKU ]; then npm run start:nest:prod; elif [ $NG_HEROKU ]; then npm run start:ng:prod; fi",
     "test": "nx test",
-    "build:ng": "nx run better-news-app:build -- --output-hashing none",
+    "build:ng": "nx run better-news-app:build -- --prod --output-hashing none",
     "build:nest": "nx run api:build",
     "start:nest": "nx run api:serve",
     "start:nest:prod": "node dist/apps/api/main.js",
     "start:ng:prod": "node dist/apps/better-news-app/main.js"
+  },
+  "engines": {
+    "node": "14.17.3",
+    "npm": "6.14.1"
   },
   "private": true,
   "dependencies": {
@@ -33,15 +37,16 @@
     "reflect-metadata": "^0.1.13",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "typescript": "^4.3.5"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.2.0",
     "@angular-eslint/eslint-plugin": "~12.3.0",
     "@angular-eslint/eslint-plugin-template": "~12.3.0",
     "@angular-eslint/template-parser": "~12.3.0",
-    "@angular/cli": "~12.2.0",
-    "@angular/compiler-cli": "^12.2.0",
+    "@angular/cli": "^12.2.6",
+    "@angular/compiler-cli": "^12.2.6",
     "@angular/language-service": "^12.2.0",
     "@nestjs/schematics": "^7.0.0",
     "@nestjs/testing": "^7.0.0",
@@ -64,9 +69,11 @@
     "eslint": "7.22.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
+    "express": "^4.17.1",
     "jest": "27.0.3",
     "jest-preset-angular": "9.0.7",
     "nx": "^12.9.0",
+    "path": "^0.12.7",
     "prettier": "^2.3.1",
     "ts-jest": "27.0.3",
     "typescript": "^4.3.5"
