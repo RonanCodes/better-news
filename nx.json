@@ -14,12 +14,7 @@
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
         "accessToken": "ZjQ3NjUxNGYtMjJjMy00MmMxLTgzMDUtNDEzZmEwNmM3YTc5fHJlYWQtd3JpdGU="
       }
     }
@@ -44,9 +39,31 @@
     },
     "better-news-app-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "better-news-app"
-      ]
+      "implicitDependencies": ["better-news-app"]
+    },
+    "bnap-home-feature": {
+      "tags": ["scope:bnap", "type:feature"]
+    },
+    "bnap-shared-ui-article": {
+      "tags": ["scope:bnap", "type:ui"]
+    },
+    "bnap-shared-ui-article-header": {
+      "tags": ["scope:bnap", "type:ui"]
+    },
+    "bnap-shared-ui-article-preview-footer": {
+      "tags": ["scope:bnap", "type:ui"]
+    },
+    "bnap-shared-ui-article-preview-header": {
+      "tags": ["scope:bnap", "type:ui"]
+    },
+    "bnap-shared-ui-article-preview-large": {
+      "tags": ["scope:bnap", "type:ui"]
+    },
+    "bnap-shared-ui-article-preview-simple": {
+      "tags": ["scope:bnap", "type:ui"]
+    },
+    "bnap-shared-ui-article-related": {
+      "tags": ["scope:bnap", "type:ui"]
     }
   }
 }

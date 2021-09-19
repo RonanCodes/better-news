@@ -15,7 +15,29 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@better-news/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@better-news/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@better-news/bnap-shared-ui-article-preview-footer": [
+        "libs/bnap/shared/ui/article/preview/footer/src/index.ts"
+      ],
+      "@better-news/bnap-shared-ui-article-preview-header": [
+        "libs/bnap/shared/ui/article/preview/header/src/index.ts"
+      ],
+      "@better-news/bnap-shared-ui-article-preview-large": [
+        "libs/bnap/shared/ui/article/preview/large/src/index.ts"
+      ],
+      "@better-news/bnap-shared-ui-article-preview-simple": [
+        "libs/bnap/shared/ui/article/preview/simple/src/index.ts"
+      ],
+      "@better-news/bnap/home/feature": ["libs/bnap/home/feature/src/index.ts"],
+      "@better-news/bnap/shared/ui/article": [
+        "libs/bnap/shared/ui/article/src/index.ts"
+      ],
+      "@better-news/bnap/shared/ui/article/header": [
+        "libs/bnap/shared/ui/article/header/src/index.ts"
+      ],
+      "@better-news/bnap/shared/ui/article/related": [
+        "libs/bnap/shared/ui/article/related/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -14,82 +14,82 @@ export class AppController {
   }
 
   @Get(IrishTimesRestEndpoint.Brexit)
-  getBrexit(): string {
+  getBrexit() {
     return this.irishTimesRestService.getBrexit();
   }
 
   @Get(IrishTimesRestEndpoint.Business)
-  getBusiness(): string {
+  getBusiness() {
     return this.irishTimesRestService.getBusiness();
   }
 
   @Get(IrishTimesRestEndpoint.Coronavirus)
-  getCoronavirus(): string {
+  getCoronavirus() {
     return this.irishTimesRestService.getCoronavirus();
   }
 
   @Get(IrishTimesRestEndpoint.Culture)
-  getCulture(): string {
+  getCulture() {
     return this.irishTimesRestService.getCulture();
   }
 
   @Get(IrishTimesRestEndpoint.Galleries)
-  getGalleries(): string {
+  getGalleries() {
     return this.irishTimesRestService.getGalleries();
   }
 
   @Get(IrishTimesRestEndpoint.Ireland)
-  getIreland(): string {
+  getIreland() {
     return this.irishTimesRestService.getIreland();
   }
 
   @Get(IrishTimesRestEndpoint.Latest)
-  getLatest(): string {
+  getLatest() {
     return this.irishTimesRestService.getLatest();
   }
 
   @Get(IrishTimesRestEndpoint.LifeStyle)
-  getLifeStyle(): string {
+  getLifeStyle() {
     return this.irishTimesRestService.getLifeStyle();
   }
 
   @Get(IrishTimesRestEndpoint.MostRead)
-  getMostRead(): string {
+  getMostRead() {
     return this.irishTimesRestService.getMostRead();
   }
 
   @Get(IrishTimesRestEndpoint.Opinion)
-  getOpinion(): string {
+  getOpinion() {
     return this.irishTimesRestService.getOpinion();
   }
 
   @Get(IrishTimesRestEndpoint.Politics)
-  getPolitics(): string {
+  getPolitics() {
     return this.irishTimesRestService.getPolitics();
   }
 
   @Get(IrishTimesRestEndpoint.Sport)
-  getSport(): string {
+  getSport() {
     return this.irishTimesRestService.getSport();
   }
 
   @Get(IrishTimesRestEndpoint.SubscriberOnly)
-  getSubscriberOnly(): string {
+  getSubscriberOnly() {
     return this.irishTimesRestService.getSubscriberOnly();
   }
 
   @Get(IrishTimesRestEndpoint.TopStories)
-  getTopStories(): string {
+  getTopStories() {
     return this.irishTimesRestService.getTopStories();
   }
 
   @Get(IrishTimesRestEndpoint.Video)
-  getVideo(): string {
+  getVideo() {
     return this.irishTimesRestService.getVideo();
   }
 
   @Get(IrishTimesRestEndpoint.World)
-  getWorld(): string {
+  getWorld() {
     return this.irishTimesRestService.getWorld();
   }
 }

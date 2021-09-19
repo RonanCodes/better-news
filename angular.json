@@ -188,6 +188,206 @@
           }
         }
       }
+    },
+    "bnap-home-feature": {
+      "projectType": "library",
+      "root": "libs/bnap/home/feature",
+      "sourceRoot": "libs/bnap/home/feature/src",
+      "prefix": "bnap",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/bnap/home/feature"],
+          "options": {
+            "jestConfig": "libs/bnap/home/feature/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bnap/home/feature/src/**/*.ts",
+              "libs/bnap/home/feature/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "bnap-shared-ui-article": {
+      "projectType": "library",
+      "root": "libs/bnap/shared/ui/article",
+      "sourceRoot": "libs/bnap/shared/ui/article/src",
+      "prefix": "bnap",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/bnap/shared/ui/article"],
+          "options": {
+            "jestConfig": "libs/bnap/shared/ui/article/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bnap/shared/ui/article/src/**/*.ts",
+              "libs/bnap/shared/ui/article/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "bnap-shared-ui-article-header": {
+      "projectType": "library",
+      "root": "libs/bnap/shared/ui/article/header",
+      "sourceRoot": "libs/bnap/shared/ui/article/header/src",
+      "prefix": "bnap",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/bnap/shared/ui/article/header"],
+          "options": {
+            "jestConfig": "libs/bnap/shared/ui/article/header/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bnap/shared/ui/article/header/src/**/*.ts",
+              "libs/bnap/shared/ui/article/header/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "bnap-shared-ui-article-preview-footer": {
+      "projectType": "library",
+      "root": "libs/bnap/shared/ui/article/preview/footer",
+      "sourceRoot": "libs/bnap/shared/ui/article/preview/footer/src",
+      "prefix": "bnap",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/bnap/shared/ui/article/preview/footer"],
+          "options": {
+            "jestConfig": "libs/bnap/shared/ui/article/preview/footer/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bnap/shared/ui/article/preview/footer/src/**/*.ts",
+              "libs/bnap/shared/ui/article/preview/footer/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "bnap-shared-ui-article-preview-header": {
+      "projectType": "library",
+      "root": "libs/bnap/shared/ui/article/preview/header",
+      "sourceRoot": "libs/bnap/shared/ui/article/preview/header/src",
+      "prefix": "bnap",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/bnap/shared/ui/article/preview/header"],
+          "options": {
+            "jestConfig": "libs/bnap/shared/ui/article/preview/header/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bnap/shared/ui/article/preview/header/src/**/*.ts",
+              "libs/bnap/shared/ui/article/preview/header/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "bnap-shared-ui-article-preview-large": {
+      "projectType": "library",
+      "root": "libs/bnap/shared/ui/article/preview/large",
+      "sourceRoot": "libs/bnap/shared/ui/article/preview/large/src",
+      "prefix": "bnap",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/bnap/shared/ui/article/preview/large"],
+          "options": {
+            "jestConfig": "libs/bnap/shared/ui/article/preview/large/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bnap/shared/ui/article/preview/large/src/**/*.ts",
+              "libs/bnap/shared/ui/article/preview/large/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "bnap-shared-ui-article-preview-simple": {
+      "projectType": "library",
+      "root": "libs/bnap/shared/ui/article/preview/simple",
+      "sourceRoot": "libs/bnap/shared/ui/article/preview/simple/src",
+      "prefix": "bnap",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/bnap/shared/ui/article/preview/simple"],
+          "options": {
+            "jestConfig": "libs/bnap/shared/ui/article/preview/simple/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bnap/shared/ui/article/preview/simple/src/**/*.ts",
+              "libs/bnap/shared/ui/article/preview/simple/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "bnap-shared-ui-article-related": {
+      "projectType": "library",
+      "root": "libs/bnap/shared/ui/article/related",
+      "sourceRoot": "libs/bnap/shared/ui/article/related/src",
+      "prefix": "bnap",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/bnap/shared/ui/article/related"],
+          "options": {
+            "jestConfig": "libs/bnap/shared/ui/article/related/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bnap/shared/ui/article/related/src/**/*.ts",
+              "libs/bnap/shared/ui/article/related/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
