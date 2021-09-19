@@ -12,9 +12,15 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ],
+        "accessToken": "ZjQ3NjUxNGYtMjJjMy00MmMxLTgzMDUtNDEzZmEwNmM3YTc5fHJlYWQtd3JpdGU="
       }
     }
   },
@@ -38,7 +44,9 @@
     },
     "better-news-app-e2e": {
       "tags": [],
-      "implicitDependencies": ["better-news-app"]
+      "implicitDependencies": [
+        "better-news-app"
+      ]
     }
   }
 }
