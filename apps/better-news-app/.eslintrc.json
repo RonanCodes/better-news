@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "better-news",
+            "prefix": "bnap",
             "style": "kebab-case"
           }
         ]

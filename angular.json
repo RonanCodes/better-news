@@ -70,7 +70,7 @@
       "projectType": "application",
       "root": "apps/better-news-app",
       "sourceRoot": "apps/better-news-app/src",
-      "prefix": "better-news",
+      "prefix": "bnap",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
