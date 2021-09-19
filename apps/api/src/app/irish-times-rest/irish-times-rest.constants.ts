@@ -1,4 +1,4 @@
-export abstract class AppConstants {
+export abstract class IrishTimesRestConstants {
   // A rest endpoint needs to be appended:
   static readonly baseUrl = 'https://app.irishtimes.com/v9-iphone-menu/iphone-';
 

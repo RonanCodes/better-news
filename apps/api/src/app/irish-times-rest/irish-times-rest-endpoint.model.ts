@@ -1,4 +1,4 @@
-export enum RestEndpoint {
+export enum IrishTimesRestEndpoint {
   TopStories = 'top-stories',
   SubscriberOnly = 'subscriber-only',
   World = 'world',
