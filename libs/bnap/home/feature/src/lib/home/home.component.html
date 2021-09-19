@@ -1,4 +1,3 @@
-<h1>📰 Welcome to BNAP, the Better News App</h1>
 <h2>Home Page</h2>
 
 <img width="450" src="/assets/images/news.png" alt="BNAP - Better News Apps" />
@@ -12,9 +11,7 @@
 
 <ul>
   <li *ngFor="let category of categories | keyvalue">
-    <a routerLink="/category/{{ category.value }}" routerLinkActive>{{
-      category.key
-    }}</a>
+    <a routerLink="/category/{{ category.value }}">{{ category.key }}</a>
     <!-- // Useful for ids #abroad -->
     <!-- fragment="{{ category.value }}" -->
   </li>
