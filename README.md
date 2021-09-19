@@ -9,4 +9,4 @@ Extra backend capabilities can be added along with a DataBase if data needs to b
 ## CD
 
 Backend Server: Heroku
-Frontend Static Site
+Frontend Static Site: 
