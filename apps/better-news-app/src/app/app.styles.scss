@@ -1,9 +1,14 @@
 :host {
   display: block;
   font-family: sans-serif;
-  min-width: 300px;
+  // min-width: 300px;
   // max-width: 600px;
-  max-width: 80%;
-  margin: 50px auto;
+  // max-width: 80%;
+  // center:
+  // @media (min-width: 1000) {
+  //   margin: 0 50px auto;
+  // }
+
   text-align: center;
+  // background-color: pink;
 }

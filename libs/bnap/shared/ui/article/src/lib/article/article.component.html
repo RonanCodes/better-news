@@ -13,7 +13,7 @@
   </section>
 
   <br />
-  <section>
+  <section class="article-image">
     <img src="{{ getLargeImage(story.indeximage!) }}" />
     <br />
     <small>{{ getImageCaption(story.indeximage!) }}</small>
@@ -35,5 +35,5 @@
 
   <!-- <h2>Content</h2> -->
   <!-- {{ story.content }} -->
-  <div [innerHTML]="story.content"></div>
+  <div class="content" [innerHTML]="story.content"></div>
 </ng-container>

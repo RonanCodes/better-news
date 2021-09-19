@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+
+.content {
+  img {
+    width: 80vw !important;
+    height: unset !important;
+    // aspect-ratio: initial;
+    // // // height: auto;
+    // align-content: center !important;
+    // // // width: fit-content;
+    // max-width: 100vw !important;
+    max-width: 1000px !important;
+
+    // min-width: unset !important;
+  }
+
+  figure figcaption {
+    // duped from article
+    font-size: 12px;
+    color: gray;
+  }
+}
+
+// // On screens with width > 1000, add margin to the content:
+// @media screen and (min-width: 1000px) {
+//   .content {
+//     margin: 0 50px auto;
+//     // background-color: blue !important;
+//   }
+// }
+
+// // On screens with width > 1000, add margin to the content:
+// @media screen and (min-width: 1000) {
+//   section.info {
+//     margin: 0 50px auto;
+//     background-color: yellow !important;
+//   }
+// }

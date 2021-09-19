@@ -1,8 +1,8 @@
 hr {
   margin-top: 25px;
   margin-bottom: 25px;
-  margin-left: -15%;
-  margin-right: -15%;
+  // margin-left: -15%;
+  // margin-right: -15%;
   border: none;
   height: 10px;
   // color: black;
@@ -15,4 +15,37 @@ hr {
 small {
   font-size: 12px;
   color: gray;
+}
+
+.article-image img {
+  width: 95vw !important;
+  height: unset !important;
+  // // height: auto;
+  // align-content: center !important;
+  // // width: fit-content;
+  max-width: 1000px !important;
+  // min-width: unset !important;
+}
+
+// // On screens with width > 1000, add margin to the content:
+// @media (max-width: 1000) {
+//   section {
+//     margin: 0 50px auto;
+//     background-color: blue !important;
+//   }
+// }
+
+// @media (max-width: 1000) {
+//   section.info {
+//     margin: 0 50px auto;
+//     background-color: brown !important;
+//   }
+// }
+
+// On screens with width > 1000, add margin to the content:
+@media screen and (min-width: 1000px) {
+  .content {
+    margin: 0 50px auto;
+    // background-color: blue !important;
+  }
 }
