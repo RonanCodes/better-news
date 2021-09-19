@@ -5,8 +5,10 @@
   display: block;
   font-family: sans-serif;
   min-width: 300px;
-  max-width: 600px;
+  // max-width: 600px;
+  max-width: 80%;
   margin: 50px auto;
+  text-align: center;
 }
 
 .gutter-left {
@@ -130,4 +132,41 @@ summary {
   height: 16px;
   width: 16px;
   margin-right: 4px;
+}
+
+hr {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: -15%;
+  margin-right: -15%;
+  border: none;
+  height: 10px;
+  // color: black;
+  background-color: black;
+  /* Set the hr color */
+  // color: #333; /* old IE */
+  // background-color: #333; /* Modern Browsers */
+}
+
+small {
+  font-size: 12px;
+  color: gray;
+}
+
+pre {
+  text-align: initial;
+}
+
+section.info {
+  // text-align: initial;
+}
+
+.story {
+  // &:nth-child(even) {
+  //   background-color: lightgray;
+  // }
+
+  // &:nth-child(odd) {
+  //   background-color: lightblue;
+  // }
 }

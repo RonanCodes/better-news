@@ -1,6 +1,13 @@
 {
   "version": 1,
   "projects": {
+    "bnap-shared-assets": {
+      "root": "libs/bnap/shared/assets",
+      "sourceRoot": "libs/bnap/shared/assets/src",
+      "projectType": "library",
+      "targets": {},
+      "tags": ["type:util", "scope:bnap"]
+    },
     "api": {
       "root": "apps/api",
       "sourceRoot": "apps/api/src",
@@ -84,7 +91,12 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "apps/better-news-app/src/favicon.ico",
-              "apps/better-news-app/src/assets"
+              "apps/better-news-app/src/assets",
+              {
+                "input": "libs/bnap/shared/assets",
+                "glob": "**/*",
+                "output": "assets"
+              }
             ],
             "styles": ["apps/better-news-app/src/styles.scss"],
             "scripts": []

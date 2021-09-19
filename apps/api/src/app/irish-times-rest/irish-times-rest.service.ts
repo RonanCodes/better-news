@@ -1,12 +1,16 @@
 import { Injectable } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
 
-import { IrishTimesIphoneResponse } from '@better-news/api-interfaces';
+import {
+  Assettype,
+  IrishTimesIphoneResponse,
+  Story,
+} from '@better-news/api-interfaces';
 import { IrishTimesRestEndpoint } from './irish-times-rest-endpoint.model';
 import { IrishTimesRestConstants } from './irish-times-rest.constants';
 import { AxiosResponse } from 'axios';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { filter, map, tap } from 'rxjs/operators';
 
 @Injectable()
 export class IrishTimesRestService {
@@ -19,8 +23,49 @@ export class IrishTimesRestService {
   private get(endpoint: string) {
     return this.httpService
       .get<IrishTimesIphoneResponse>(this.getIrishTimesUrl(endpoint))
-      .pipe(map((axiosResponse) => axiosResponse.data));
+      .pipe(
+        map((axiosResponse) => axiosResponse.data.stories),
+        map((stories) =>
+          stories.filter((story) => story.assettype === Assettype.Article)
+        ),
+        tap((stories) => stories.forEach((story) => this.sanitizeStory(story)))
+      );
+
+    // <script>
   }
+
+  sanitizeStory(story: Story): void {
+    story.content = this.removeScriptsFromHTML(story.content);
+  }
+
+  // Move to util lib
+  removeScriptsFromHTML(htmlString: string): string {
+    // !?(<script>).+?(<\/script>)
+
+    // const scriptTagsAndContent = `(<script>)\\w.*(<\\/script>)`;
+
+    // const pattern = new RegExp('!?(<script>)\\w.*(<\\/script>)');
+    // const pattern = new RegExp('!?(<script>)\\w.*(<\\/script>)');
+
+    // const pattern = new RegExp('!?(<script>).+?(<\\/script>)');
+    // const result = pattern.exec(htmlString);
+    // console.log({ result });
+
+    // g flag to replace ALL occurences: https://www.codeguage.com/courses/regexp/flags
+
+    // TODO: use a library to find and remove all divs with the advert class on it.
+
+    const pattern3 = new RegExp('!?(<script>).+?(</script>)', 'g');
+
+    const sanitizedString = htmlString.replace(pattern3, '');
+
+    // htmlString.replace('!?(<script>).+?(<\\/script>)', '');
+    console.log({ sanitizedString });
+
+    return sanitizedString;
+  }
+
+  // removeTags(htmlString: string, tagName: string) {}
 
   getAbroad() {
     return this.get(IrishTimesRestEndpoint.Abroad);
