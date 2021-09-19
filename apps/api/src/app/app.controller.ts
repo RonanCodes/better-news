@@ -1,5 +1,5 @@
 import { IrishTimesIphoneResponse } from '@better-news/api-interfaces';
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Render } from '@nestjs/common';
 
 import { IrishTimesRestEndpoint } from './irish-times-rest/irish-times-rest-endpoint.model';
 import { IrishTimesRestService } from './irish-times-rest/irish-times-rest.service';
@@ -7,6 +7,10 @@ import { IrishTimesRestService } from './irish-times-rest/irish-times-rest.servi
 @Controller()
 export class AppController {
   constructor(private readonly irishTimesRestService: IrishTimesRestService) {}
+
+  @Get()
+  @Render('index')
+  root() {}
 
   @Get(IrishTimesRestEndpoint.Abroad)
   getAbroad() {

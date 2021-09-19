@@ -4,11 +4,12 @@
   "license": "MIT",
   "scripts": {
     "ng": "nx",
-    "postinstall": "if [ !$NEST_HEROKU ]; then node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main; fi",
-    "start": "if [ $NEST_HEROKU ]; then npm run start:nest:prod; elif [ $NG_HEROKU ]; then npm run start:ng:prod; else nx serve; fi",
-    "build": "if [ $NEST_HEROKU ]; then npm run build:nest; elif [ $NG_HEROKU ]; then npm run build:ng; else nx build; fi",
-    "start:prod": "if [ $NEST_HEROKU ]; then npm run start:nest:prod; elif [ $NG_HEROKU ]; then npm run start:ng:prod; fi",
+    "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
+    "build": "if [ $CD_HEROKU ]; then npm run build:cdheroku; else nx build; fi",
+    "start": "if [ $CD_HEROKU ]; then npm run start:nest:prod; else nx serve; fi",
+    "start:prod": "if [ $CD_HEROKU ]; then npm run start:nest:prod; elif [ $NG_HEROKU ]; then npm run start:ng:prod; fi",
     "test": "nx test",
+    "build:cdheroku": "npm run build:ng && npm run build:nest",
     "build:ng": "nx run better-news-app:build -- --prod",
     "build:nest": "nx run api:build",
     "start:nest": "nx run api:serve",
@@ -33,12 +34,13 @@
     "@nestjs/common": "^7.0.0",
     "@nestjs/core": "^7.0.0",
     "@nestjs/platform-express": "^7.0.0",
+    "@nestjs/serve-static": "^2.2.2",
     "@nrwl/angular": "12.9.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.11.4",
-    "typescript": "^4.3.5"
+    "typescript": "^4.3.5",
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.2.0",
