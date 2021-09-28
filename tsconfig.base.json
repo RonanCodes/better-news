@@ -26,7 +26,7 @@
         "libs/bnap/shared/ui/article/preview/large/src/index.ts"
       ],
       "@better-news/bnap-shared-ui-article-preview-simple": [
-        "libs/bnap/shared/ui/article/preview/simple/src/index.ts"
+        "libs/bnap/shared/ui/article-preview/simple/src/index.ts"
       ],
       "@better-news/bnap/category/feature": [
         "libs/bnap/category/feature/src/index.ts"

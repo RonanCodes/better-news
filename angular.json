@@ -378,15 +378,15 @@
     },
     "bnap-shared-ui-article-preview-simple": {
       "projectType": "library",
-      "root": "libs/bnap/shared/ui/article/preview/simple",
-      "sourceRoot": "libs/bnap/shared/ui/article/preview/simple/src",
+      "root": "libs/bnap/shared/ui/article-preview/simple",
+      "sourceRoot": "libs/bnap/shared/ui/article-preview/simple/src",
       "prefix": "bnap",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/bnap/shared/ui/article/preview/simple"],
+          "outputs": ["coverage/libs/bnap/shared/ui/article-preview/simple"],
           "options": {
-            "jestConfig": "libs/bnap/shared/ui/article/preview/simple/jest.config.js",
+            "jestConfig": "libs/bnap/shared/ui/article-preview/simple/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -394,8 +394,8 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/bnap/shared/ui/article/preview/simple/src/**/*.ts",
-              "libs/bnap/shared/ui/article/preview/simple/src/**/*.html"
+              "libs/bnap/shared/ui/article-preview/simple/src/**/*.ts",
+              "libs/bnap/shared/ui/article-preview/simple/src/**/*.html"
             ]
           }
         }

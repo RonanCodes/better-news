@@ -22,6 +22,13 @@ const routes: Route[] = [
       ),
   },
   {
+    path: 'article',
+    loadChildren: () =>
+      import('@better-news/bnap/shared/ui/article').then(
+        (m) => m.BnapSharedUiArticleModule
+      ),
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',

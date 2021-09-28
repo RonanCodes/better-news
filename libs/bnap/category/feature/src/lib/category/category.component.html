@@ -1,9 +1,9 @@
-<h1 class="primary">{{ categoryName }}</h1>
+<h1>{{ categoryName }}</h1>
 
 <h1 *ngIf="(stories$ | async)?.length! <= 0">LOADING</h1>
 
-<bnap-article
+<bnap-article-preview-simple
   *ngFor="let story of stories$ | async"
   [story]="story"
   class="story"
-></bnap-article>
+></bnap-article-preview-simple>

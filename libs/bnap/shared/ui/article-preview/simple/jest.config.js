@@ -1,6 +1,6 @@
 module.exports = {
   displayName: 'bnap-shared-ui-article-preview-simple',
-  preset: '../../../../../../../jest.preset.js',
+  preset: '../../../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
     'ts-jest': {
@@ -9,7 +9,7 @@ module.exports = {
     },
   },
   coverageDirectory:
-    '../../../../../../../coverage/libs/bnap/shared/ui/article/preview/simple',
+    '../../../../../../coverage/libs/bnap/shared/ui/article-preview/simple',
   transform: {
     '^.+\\.(ts|js|html)$': 'jest-preset-angular',
   },

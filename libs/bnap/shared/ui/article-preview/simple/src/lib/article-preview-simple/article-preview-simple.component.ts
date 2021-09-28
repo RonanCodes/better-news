@@ -4,7 +4,6 @@ import {
   ChangeDetectionStrategy,
   Input,
 } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import {
   Image,
   IrishTimesIphoneResponse,
@@ -14,31 +13,18 @@ import {
 } from '@better-news/api-interfaces';
 
 @Component({
-  selector: 'bnap-article',
-  templateUrl: './article.component.html',
-  styleUrls: ['./article.component.scss'],
+  selector: 'bnap-article-preview-simple',
+  templateUrl: './article-preview-simple.component.html',
+  styleUrls: ['./article-preview-simple.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ArticleComponent {
-  public showMetaData = false;
-  @Input() story?: Story;
-
-  // public story?;
-
-  constructor(private route: ActivatedRoute, private router: Router) {}
-
-  ngOnInit() {
-    // this.story$ = this.route.paramMap.pipe(
-    //   switchMap((params) => {
-    //     this.selectedId = Number(params.get('id'));
-    //     return this.service.getHeroes();
-    //   })
-    // );
-
-    this.story = JSON.parse(
-      this.route!.snapshot!.paramMap!.get('story')!
-    ) as Story;
+export class ArticlePreviewSimpleComponent {
+  stringify(story: Story): string {
+    return JSON.stringify(story);
   }
+
+  // TODO: move this to a util class as it's all duplicated
+  @Input() story?: Story;
 
   getLargeImage(images: Image[]): string {
     // sizeElements: SizeElement[]
