@@ -19,6 +19,7 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ArticleComponent {
+  public showMetaData = false;
   @Input() story?: Story;
 
   getLargeImage(images: Image[]): string {
@@ -43,5 +44,20 @@ export class ArticleComponent {
   getWriterImage(image: Image): string {
     const sizeElements = image.sizes;
     return sizeElements ? this.getLargeImageOrFirst(sizeElements!) : '';
+  }
+
+  getFormattedDate(date: string): string {
+    const formattedDate = new Date(Date.parse(date));
+    // return formattedDate.toLocaleDateString();
+
+    // `${formattedDate.toDateString()}
+    return formattedDate.toLocaleTimeString('en-IE', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour12: true,
+    });
+    // return formattedDate.toLocaleString();
   }
 }

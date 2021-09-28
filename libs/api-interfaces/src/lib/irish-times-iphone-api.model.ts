@@ -52,7 +52,7 @@ export interface Story {
   author?: string;
   toplead?: string;
   advert?: Interstitialadvert;
-  publicationdate?: Date;
+  publicationdate?: string;
   digitalpass?: Digitalpass;
   commentcount?: number;
   relateditems?: Relateditem[];

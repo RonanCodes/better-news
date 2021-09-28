@@ -3,6 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'bnap-root',
   templateUrl: 'app.component.html',
-  styleUrls: ['app.component.styles.scss'],
+  styleUrls: ['app.component.scss'],
 })
 export class AppComponent {}

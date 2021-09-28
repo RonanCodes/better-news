@@ -36,3 +36,311 @@
 //     background-color: yellow !important;
 //   }
 // }
+
+// GLOBAL STYLE SETTINGS
+:root {
+  // ECONOMIST STYLES
+  --color-primary: rgb(227, 18, 11);
+
+  font-family: MiloTE, MiloTESec, Charter, 'Bitstream Charter',
+    'Iowan Old Style', 'Calisto MT', serif;
+  font-size: 20.25px;
+  color: rgb(13, 13, 13);
+
+  h1 {
+    font-size: 36.4912px;
+    font-weight: 500;
+    // font-stretch: 100%;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  small {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic rgb(89, 89, 89);
+  }
+
+  time {
+    color: rgb(89, 89, 89);
+    font-size: 14.2222px;
+    font-weight: 500;
+  }
+}
+
+// :root {
+
+// font-family: MiloTE, MiloTESec, Charter, 'Bitstream Charter',
+//   'Iowan Old Style', 'Calisto MT', serif;
+
+// --ds-type-system-serif: 'MiloTE', 'MiloTESec', Charter, 'Bitstream Charter',
+//   'Iowan Old Style', 'Calisto MT', serif;
+// --ds-type-system-serif-smallcaps: 'MiloTESC', var(--ds-type-system-serif);
+// }
+
+// @font-face {
+//   font-display: swap;
+//   font-family: MiloTE;
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-primary-subset-rg.woff2)
+//       format('woff2'),
+//     url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-primary-subset-rg.woff)
+//       format('woff');
+// }
+
+// @font-face {
+//   font-display: swap;
+//   font-family: MiloTE;
+//   font-style: italic;
+//   font-weight: 400;
+//   src: url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-primary-subset-rg-it.woff2)
+//       format('woff2'),
+//     url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-primary-subset-rg-it.woff)
+//       format('woff');
+// }
+
+// @font-face {
+//   font-display: swap;
+//   font-family: MiloTE;
+//   font-style: normal;
+//   font-weight: 500;
+//   src: url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-primary-subset-md.woff2)
+//       format('woff2'),
+//     url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-primary-subset-md.woff)
+//       format('woff');
+// }
+
+// @font-face {
+//   font-display: swap;
+//   font-family: MiloTE;
+//   font-style: italic;
+//   font-weight: 500;
+//   src: url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-primary-subset-md-it.woff2)
+//       format('woff2'),
+//     url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-primary-subset-md-it.woff)
+//       format('woff');
+// }
+
+// @font-face {
+//   font-display: swap;
+//   font-family: MiloTE;
+//   font-style: normal;
+//   font-weight: 700;
+//   src: url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-primary-subset-bd.woff2)
+//       format('woff2'),
+//     url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-primary-subset-bd.woff)
+//       format('woff');
+// }
+
+// @font-face {
+//   font-display: swap;
+//   font-family: MiloTE;
+//   font-style: italic;
+//   font-weight: 700;
+//   src: url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-primary-subset-bd-it.woff2)
+//       format('woff2'),
+//     url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-primary-subset-bd-it.woff)
+//       format('woff');
+// }
+
+// @font-face {
+//   font-display: swap;
+//   font-family: MiloTE;
+//   font-style: normal;
+//   font-weight: 800;
+//   src: url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-primary-subset-xbd.woff2)
+//       format('woff2'),
+//     url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-primary-subset-xbd.woff)
+//       format('woff');
+// }
+
+// @font-face {
+//   font-display: swap;
+//   font-family: MiloTE;
+//   font-style: italic;
+//   font-weight: 800;
+//   src: url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-primary-subset-xbd-it.woff2)
+//       format('woff2'),
+//     url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-primary-subset-xbd-it.woff)
+//       format('woff');
+// }
+
+// @font-face {
+//   font-display: swap;
+//   font-family: MiloTESec;
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-secondary-subset-rg.woff2)
+//       format('woff2'),
+//     url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-secondary-subset-rg.woff)
+//       format('woff');
+// }
+
+// @font-face {
+//   font-display: swap;
+//   font-family: MiloTESec;
+//   font-style: italic;
+//   font-weight: 400;
+//   src: url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-secondary-subset-rg-it.woff2)
+//       format('woff2'),
+//     url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-secondary-subset-rg-it.woff)
+//       format('woff');
+// }
+
+// @font-face {
+//   font-display: swap;
+//   font-family: MiloTESec;
+//   font-style: normal;
+//   font-weight: 500;
+//   src: url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-secondary-subset-md.woff2)
+//       format('woff2'),
+//     url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-secondary-subset-md.woff)
+//       format('woff');
+// }
+
+// @font-face {
+//   font-display: swap;
+//   font-family: MiloTESec;
+//   font-style: italic;
+//   font-weight: 500;
+//   src: url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-secondary-subset-md-it.woff2)
+//       format('woff2'),
+//     url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-secondary-subset-md-it.woff)
+//       format('woff');
+// }
+
+// @font-face {
+//   font-display: swap;
+//   font-family: MiloTESec;
+//   font-style: normal;
+//   font-weight: 700;
+//   src: url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-secondary-subset-bd.woff2)
+//       format('woff2'),
+//     url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-secondary-subset-bd.woff)
+//       format('woff');
+// }
+
+// @font-face {
+//   font-display: swap;
+//   font-family: MiloTESec;
+//   font-style: italic;
+//   font-weight: 700;
+//   src: url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-secondary-subset-bd-it.woff2)
+//       format('woff2'),
+//     url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-secondary-subset-bd-it.woff)
+//       format('woff');
+// }
+
+// @font-face {
+//   font-display: swap;
+//   font-family: MiloTESec;
+//   font-style: normal;
+//   font-weight: 800;
+//   src: url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-secondary-subset-xbd.woff2)
+//       format('woff2'),
+//     url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-secondary-subset-xbd.woff)
+//       format('woff');
+// }
+
+// @font-face {
+//   font-display: swap;
+//   font-family: MiloTESec;
+//   font-style: italic;
+//   font-weight: 800;
+//   src: url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-secondary-subset-xbd-it.woff2)
+//       format('woff2'),
+//     url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-secondary-subset-xbd-it.woff)
+//       format('woff');
+// }
+
+// @font-face {
+//   font-display: swap;
+//   font-family: MiloTESC;
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-smallcaps-rg.woff2)
+//       format('woff2'),
+//     url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-smallcaps-rg.woff)
+//       format('woff');
+// }
+
+// @font-face {
+//   font-display: swap;
+//   font-family: MiloTESC;
+//   font-style: italic;
+//   font-weight: 400;
+//   src: url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-smallcaps-rg-it.woff2)
+//       format('woff2'),
+//     url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-smallcaps-rg-it.woff)
+//       format('woff');
+// }
+
+// @font-face {
+//   font-display: swap;
+//   font-family: MiloTESC;
+//   font-style: normal;
+//   font-weight: 500;
+//   src: url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-smallcaps-md.woff2)
+//       format('woff2'),
+//     url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-smallcaps-md.woff)
+//       format('woff');
+// }
+
+// @font-face {
+//   font-display: swap;
+//   font-family: MiloTESC;
+//   font-style: italic;
+//   font-weight: 500;
+//   src: url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-smallcaps-md-it.woff2)
+//       format('woff2'),
+//     url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-smallcaps-md-it.woff)
+//       format('woff');
+// }
+
+// @font-face {
+//   font-display: swap;
+//   font-family: MiloTESC;
+//   font-style: normal;
+//   font-weight: 700;
+//   src: url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-smallcaps-bd.woff2)
+//       format('woff2'),
+//     url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-smallcaps-bd.woff)
+//       format('woff');
+// }
+
+// @font-face {
+//   font-display: swap;
+//   font-family: MiloTESC;
+//   font-style: italic;
+//   font-weight: 700;
+//   src: url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-smallcaps-bd-it.woff2)
+//       format('woff2'),
+//     url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-smallcaps-bd-it.woff)
+//       format('woff');
+// }
+
+// @font-face {
+//   font-display: swap;
+//   font-family: MiloTESC;
+//   font-style: normal;
+//   font-weight: 800;
+//   src: url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-smallcaps-xbd.woff2)
+//       format('woff2'),
+//     url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-smallcaps-xbd.woff)
+//       format('woff');
+// }
+
+// @font-face {
+//   font-display: swap;
+//   font-family: MiloTESC;
+//   font-style: italic;
+//   font-weight: 800;
+//   src: url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-smallcaps-xbd-it.woff2)
+//       format('woff2'),
+//     url(https://cdn.design-system.economist.com/assets/5.30.2/common/static/fonts/milo-smallcaps-xbd-it.woff)
+//       format('woff');
+// }

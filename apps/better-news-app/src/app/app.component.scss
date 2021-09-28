@@ -1,6 +1,9 @@
 :host {
   display: block;
-  font-family: sans-serif;
+  // CENTER?
+  // text-align: center;
+
+  // font-family: sans-serif;
   // min-width: 300px;
   // max-width: 600px;
   // max-width: 80%;
@@ -9,11 +12,13 @@
   //   margin: 0 50px auto;
   // }
 
-  text-align: center;
   // background-color: pink;
 }
 
-h1 a {
-  color: initial;
-  text-decoration: initial !important;
+h1 {
+  a {
+    // color: initial;
+    color: var(--color-primary);
+    text-decoration: initial !important;
+  }
 }

@@ -1,8 +1,11 @@
 <ng-container *ngIf="story">
-  <hr />
+  <hr class="thick" />
   <h1>{{ story.title }}</h1>
+
+  <h2>
+    {{ story.summary }}
+  </h2>
   <!-- <strong>Summary:</strong>  -->
-  {{ story.summary }} <br />
   <br />
   <br />
 
@@ -19,17 +22,23 @@
     <small>{{ getImageCaption(story.indeximage!) }}</small>
   </section>
 
-  <br />
-  <section class="info">
+  <!-- <br /> -->
+
+  <hr />
+  <time> {{ getFormattedDate(story.publicationdate!) }} </time>
+  <section class="info" *ngIf="showMetaData">
     <!-- <button>Show/Hide Info</button> <br /> -->
 
+    <!-- <strong>Publication Date:</strong
+    ><time> {{ getFormattedDate(story.publicationdate!) }} </time><br /> -->
     <strong>Section:</strong> {{ story.section }} <br />
     <strong>Topic:</strong> {{ story.customfields?.topic }} <br />
     <strong>Writers:</strong> {{ story.customfields?.writers }} <br />
     <strong>Article Section:</strong> {{ story.articlesection }}
     <br />
     <strong>Big Story:</strong> {{ story.bigstory }} <br />
-    <strong>Comments Status:</strong> {{ story.commentsstatus }}
+    <strong>Comments Status:</strong> {{ story.commentsstatus }}<br />
+
     <br />
   </section>
 
