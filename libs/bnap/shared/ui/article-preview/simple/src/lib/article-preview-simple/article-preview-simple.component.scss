@@ -55,3 +55,12 @@ small {
     // background-color: blue !important;
   }
 }
+
+// duplicated from app component
+h1 {
+  a {
+    // color: initial;
+    color: var(--color-primary);
+    text-decoration: initial !important;
+  }
+}

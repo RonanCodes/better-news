@@ -13,6 +13,8 @@ import {
   Story,
 } from '@better-news/api-interfaces';
 
+import { map, tap } from 'rxjs/operators';
+
 @Component({
   selector: 'bnap-article',
   templateUrl: './article.component.html',
@@ -23,11 +25,18 @@ export class ArticleComponent {
   public showMetaData = false;
   @Input() story?: Story;
 
+  public state$: any;
+
   // public story?;
 
   constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit() {
+    // Start each page at the top (because browser remembers route scroll location, can remove once unique id per story):
+    window.scroll(0, 0);
+
+    console.log('ARTICLE INIT');
+
     // this.story$ = this.route.paramMap.pipe(
     //   switchMap((params) => {
     //     this.selectedId = Number(params.get('id'));
@@ -35,9 +44,29 @@ export class ArticleComponent {
     //   })
     // );
 
-    this.story = JSON.parse(
-      this.route!.snapshot!.paramMap!.get('story')!
-    ) as Story;
+    // this.story = JSON.parse(
+    //   this.route!.snapshot!.paramMap!.get('story')!
+    // ) as Story;
+
+    // console.log({ state: window.history.state });
+
+    // TODO: We should use a data store (NGRX) with a unique id per story
+    try {
+      this.story = JSON.parse(window.history.state['story']);
+    } catch (error) {
+      console.error(
+        'Cannot reload and article, must navigate from article preview list page',
+        { error }
+      );
+    }
+
+    // this.state$ = this.route.paramMap.pipe(
+    //   tap((paramMap) => console.log({ paramMap })),
+
+    //   map(() => window.history.state),
+    //   tap((state) => (this.story = state['story'])),
+    //   tap((state) => console.log({ state }))
+    // );
   }
 
   getLargeImage(images: Image[]): string {

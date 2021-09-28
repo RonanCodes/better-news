@@ -1,7 +1,7 @@
 <ng-container *ngIf="story">
   <hr class="thick" />
   <h1>
-    <a [routerLink]="['/article', { story: stringify(story) }]">{{
+    <a routerLink="/article" [state]="{ story: stringify(story) }">{{
       story.title
     }}</a>
   </h1>
