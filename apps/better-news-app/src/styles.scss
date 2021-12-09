@@ -9,7 +9,7 @@ hr.thick {
   border: none;
   height: 10px;
   // color: black;
-  background-color: black;
+  background-color: var(--color-on-background);
   /* Set the hr color */
   // color: #333; /* old IE */
   // background-color: #333; /* Modern Browsers */
@@ -84,8 +84,65 @@ hr.thick {
     font-size: 14.2222px;
     font-weight: 500;
   }
+
+  // MATERIAL DARK
+  // The baseline Material color theme: https://material.io/design/color/the-color-system.html#color-theme-creation
+  .light-mode {
+    --color-primary: #6200ee;
+    --color-primary-variant: #3700b3;
+    // Can have a third variant color
+
+    // Optional:
+    --color-secondary: #03dac6;
+    --color-secondary-variant: #018786;
+
+    --color-background: #ffffff;
+    --color-surface: #ffffff;
+    --color-error: #b00020;
+
+    --color-on-primary: #6200ee;
+    --color-on-secondary: #000000;
+    --color-on-background: #000000;
+    --color-on-surface: #000000;
+    --color-on-error: #ffffff;
+  }
+
+  .dark-mode {
+    --color-primary: #bb86fc;
+    --color-primary-variant: #3700b3;
+    // Can have a third variant color
+
+    // Optional:
+    --color-secondary: #03dac6;
+
+    --color-background: #121212;
+    --color-surface: #121212;
+    --color-error: #cf6679;
+
+    --color-on-primary: #6200ee;
+    --color-on-secondary: #ffffff;
+    --color-on-background: #ffffff;
+    --color-on-surface: #ffffff;
+    --color-on-error: #121212;
+
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+
+    time,
+    figcaption,
+    small,
+    a {
+      color: var(--color-on-background);
+    }
+  }
 }
 
+:root {
+}
+
+// :root {
+//   background-color: var(--color-background);
+// }
 // :root {
 
 // font-family: MiloTE, MiloTESec, Charter, 'Bitstream Charter',
