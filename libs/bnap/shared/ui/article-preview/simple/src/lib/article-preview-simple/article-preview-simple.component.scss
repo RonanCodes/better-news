@@ -57,10 +57,10 @@ small {
 }
 
 // duplicated from app component
-h1 {
-  a {
-    // color: initial;
-    color: var(--color-primary);
-    text-decoration: initial !important;
-  }
+// h1 {
+a {
+  // color: initial;
+  color: var(--color-primary);
+  text-decoration: initial !important;
 }
+// }

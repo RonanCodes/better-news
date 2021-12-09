@@ -1,38 +1,38 @@
 <ng-container *ngIf="story">
-  <hr class="thick" />
-  <h1>
-    <a routerLink="/article" [state]="{ story: stringify(story) }">{{
-      story.title
-    }}</a>
-  </h1>
+  <a routerLink="/article" [state]="{ story: stringify(story) }">
+    <hr class="thick" />
+    <h1>
+      {{ story.title }}
+    </h1>
 
-  <!-- 
+    <!-- 
   <h1 class="header">
     <a routerLink="home" title="Home Page">📰 BNAP, the Better News App </a>
   </h1> -->
 
-  <h2>
-    {{ story.summary }}
-  </h2>
-  <!-- <strong>Summary:</strong>  -->
-  <!-- <br /> -->
-  <!-- <br /> -->
-
-  <section *ngIf="story.author">
-    <!-- <h2>Author</h2> -->
-    <!-- <img src="{{ getWriterImage(story.writerimage!) }}" /><br /> -->
-    <strong>{{ story.author! }}</strong>
-  </section>
-
-  <br />
-  <section class="article-image">
-    <img src="{{ getLargeImage(story.indeximage!) }}" />
+    <h2>
+      {{ story.summary }}
+    </h2>
+    <!-- <strong>Summary:</strong>  -->
     <!-- <br /> -->
-    <!-- <small>{{ getImageCaption(story.indeximage!) }}</small> -->
-  </section>
+    <!-- <br /> -->
 
-  <!-- <br /> -->
+    <section *ngIf="story.author">
+      <!-- <h2>Author</h2> -->
+      <!-- <img src="{{ getWriterImage(story.writerimage!) }}" /><br /> -->
+      <strong>{{ story.author! }}</strong>
+    </section>
 
-  <!-- <hr /> -->
-  <time> {{ getFormattedDate(story.publicationdate!) }} </time>
+    <br />
+    <section class="article-image">
+      <img src="{{ getLargeImage(story.indeximage!) }}" />
+      <!-- <br /> -->
+      <!-- <small>{{ getImageCaption(story.indeximage!) }}</small> -->
+    </section>
+
+    <!-- <br /> -->
+
+    <!-- <hr /> -->
+    <time> {{ getFormattedDate(story.publicationdate!) }} </time>
+  </a>
 </ng-container>
