@@ -109,7 +109,8 @@ hr.thick {
 
   .dark-mode {
     --color-primary: #bb86fc;
-    --color-primary-variant: #3700b3;
+    // --color-primary-variant: #3700b3;
+    --color-primary-variant: #6200ee; // change
     // Can have a third variant color
 
     // Optional:
@@ -133,6 +134,13 @@ hr.thick {
     small,
     a {
       color: var(--color-on-background);
+      color: var(--color-primary-variant);
+    }
+
+    font-size: 24px;
+
+    h1 {
+      color: var(--color-primary);
     }
   }
 }
